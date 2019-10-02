@@ -1,0 +1,13 @@
+If you are using a computer that is part of the school Linux system (ie, it is a desktop computer), then you will not have root, or admin, access. This can be problematic if you need to install a python package that is not part of the standard distribution. 
+
+You can ask IT to install these packages for you, but that option often takes several days. Instead, if the package can be installed via `pip`, then there is an alternative method to allow you to install the package locally without admin access. 
+
+Let us assume you are attempting to install a package called `FooBar`. The typical install instructions on the website are:
+
+`pip install FooBar`
+
+But trying this produces an error demanding root access or an admin password. Instead, try the following:
+
+`pip install FooBar --user`
+
+This will install a local copy of the package that python will still be able to find. Just be aware that it will default to installing in your home drive, which has very limited space. It may be worth working with IT at the start of your position to "soft link" much of your local files to a larger storage space, such as your hard drive. 
